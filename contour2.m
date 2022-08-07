@@ -1,0 +1,15 @@
+figure;
+[X,Y,Z] = peaks;
+subplot(2,2,1);
+contour(X,Y,Z,20,'LineWidth',2);
+subplot(2,2,2);
+contour(X,Y,Z,'--','LineWidth',2);
+subplot(2,2,3);
+v = [1,1];
+contour(X,Y,Z,v,'LineWidth',2);
+x = -2:0.2:2;
+y = -2:0.2:3;
+[X,Y] = meshgrid(x,y);
+Z = X.*exp(-X.^2-Y.^2);
+subplot(2,2,4);
+contour(X,Y,Z,'ShowText','on','LineWidth',2);
